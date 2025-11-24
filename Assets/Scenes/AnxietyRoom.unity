@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124941676}
   - component: {fileID: 124941677}
+  - component: {fileID: 124941678}
   m_Layer: 5
   m_Name: AnxietyBar
   m_TagString: Untagged
@@ -209,6 +210,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &124941678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124941675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1a48dc13893cf448d0e8dd8d80e49f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverLoad: GameLost
+  Bar: {fileID: 124941677}
+  increaseRate: 5
 --- !u!1 &130192506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dd09170d9508e41bb92359a35e3961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: FearRoom
+  NextScene: PathTransition
   DialogueBox: {fileID: 1128563603}
   DialogueText: {fileID: 371742012}
 --- !u!1 &908445416

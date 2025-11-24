@@ -28,13 +28,17 @@ using UnityEngine.SceneManagement;
 			if (Input.GetKeyDown(KeyCode.F))
 			{
 				var mainGame = FindObjectOfType<MainGame>();
+			if(mainGame == null)
+			{
+				SceneManager.LoadScene(NextScene);
+			}
 
 			if (!mainGame.CurrentRoomTaskDone)
 			{
 				DialogueBox.SetActive(true);
 				DialogueText.text = "The door won't open yet.";
 			}
-			else
+			else 
 			{
 				DialogueBox.SetActive(true);
 				DialogueText.text = "I'm escaping this room.";

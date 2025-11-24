@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FearRoom.unity
     guid: c3604c5e40104774cba030c6b647877c
+  - enabled: 1
+    path: Assets/Scenes/PathTransition.unity
+    guid: 7321ec1268d1f0e439229c2c5da77bfa
+  - enabled: 1
+    path: Assets/Scenes/GameLost.unity
+    guid: 2500acb168dd89c41a1b9dfba3e08b1b
+  - enabled: 1
+    path: Assets/Scenes/GameWon.unity
+    guid: c90e138c1323608499585bcd0d7eef2e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

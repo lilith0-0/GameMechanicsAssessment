@@ -46,12 +46,12 @@ public class CharacterInteract : MonoBehaviour
 			{
 				case Interacting.InteractionType.Positive:
 					if (AnxietyBar != null) AnxietyBar.value -= currentItem.emotionalValue;
-					if (FearBar != null) FearBar.value += currentItem.emotionalValue;
+					if (FearBar != null) FearBar.value -= currentItem.emotionalValue;
 					break;
 
 				case Interacting.InteractionType.Negative:
 					if (AnxietyBar != null) AnxietyBar.value += currentItem.emotionalValue;
-					if (FearBar != null) FearBar.value -= currentItem.emotionalValue;
+					if (FearBar != null) FearBar.value += currentItem.emotionalValue;
 					break;
 
 				case Interacting.InteractionType.Collectible:
