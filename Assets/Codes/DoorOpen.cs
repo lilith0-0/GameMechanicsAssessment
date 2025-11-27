@@ -33,7 +33,7 @@ using UnityEngine.SceneManagement;
 				SceneManager.LoadScene(NextScene);
 			}
 
-			if (!mainGame.CurrentRoomTaskDone)
+			if (!mainGame.TaskDone)
 			{
 				DialogueBox.SetActive(true);
 				DialogueText.text = "The door won't open yet.";

@@ -13,7 +13,7 @@ public class MainGame : MonoBehaviour
 	public int PicturesRequired = 5;
 
 	
-	public bool CurrentRoomTaskDone
+	public bool TaskDone
 	{
 		get
 		{

@@ -10,8 +10,6 @@ public class BarsTiming : MonoBehaviour
 
 	void Update()
 	{
-		Debug.Log("BarsTiming running");
-
 		Bar.value += increaseRate * Time.deltaTime;
 
 		if (Bar.value >= Bar.maxValue)
