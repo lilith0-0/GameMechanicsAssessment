@@ -4,7 +4,6 @@ public class PathLightTrigger : MonoBehaviour
 {
 	public SpriteRenderer pathSprite;
 	public float fadeSpeed = 2f;
-
 	private float targetAlpha = 0f; 
 
 	void Start()
@@ -18,20 +17,11 @@ public class PathLightTrigger : MonoBehaviour
 		}
 	}
 
-	void Update()
-	{
-		if (pathSprite == null) return;
-
-		Color c = pathSprite.color;
-		c.a = Mathf.Lerp(c.a, targetAlpha, fadeSpeed * Time.deltaTime);
-		pathSprite.color = c;
-	}
-
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Player"))
 		{
-			targetAlpha = 1f; 
+			targetAlpha = 1f;
 		}
 	}
 
@@ -39,7 +29,16 @@ public class PathLightTrigger : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			targetAlpha = 0f; 
+			targetAlpha = 0f;
 		}
+	}
+
+	void Update()
+	{
+		if (pathSprite == null) return;
+
+		Color c = pathSprite.color;
+		c.a = Mathf.Lerp(c.a, targetAlpha, fadeSpeed * Time.deltaTime);
+		pathSprite.color = c;
 	}
 }

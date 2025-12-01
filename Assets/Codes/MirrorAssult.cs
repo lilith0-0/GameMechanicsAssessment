@@ -8,7 +8,6 @@ public class MirrorAssult : MonoBehaviour
 	public GameObject DialogueBox;
 	public Slider FearBar;
 	public TextMeshProUGUI DialogueText;
-
 	private bool inReach = false;
 
 	private void OnTriggerEnter2D(Collider2D other)

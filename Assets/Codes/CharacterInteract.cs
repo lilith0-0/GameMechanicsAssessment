@@ -9,9 +9,7 @@ public class CharacterInteract : MonoBehaviour
 	public Slider FearBar;
 	public GameObject DialogueBox;
 	public TextMeshProUGUI DialogueText;
-
 	private Interacting currentItem;
-
 	private bool inReach = false;
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -24,7 +22,6 @@ public class CharacterInteract : MonoBehaviour
 		}
 	}
 
-
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		var item = other.GetComponent<Interacting>();
@@ -34,9 +31,9 @@ public class CharacterInteract : MonoBehaviour
 			currentItem = null;
 		}
 	}
+
 	void Update()
 	{
-
 		if (inReach && currentItem != null)
 		{
 			if (Input.GetKeyDown(KeyCode.F))
@@ -68,13 +65,11 @@ public class CharacterInteract : MonoBehaviour
 								DialogueText.text = "I don't understand this yet...";
 								break;
 							}
-
 							mainGame.GObjectsCollected++;
 							DialogueBox.SetActive(true);
 							DialogueText.text = currentItem.innerThought;
 							Destroy(currentItem.gameObject);
 						}
-
 						else if (scene == "FearRoom")
 						{
 							mainGame.PicturesCollected++;
@@ -103,11 +98,8 @@ public class CharacterInteract : MonoBehaviour
 			{
 				DialogueBox.SetActive(false);
 			}
-
 		}
-
-
-
 	}
 }
+
 

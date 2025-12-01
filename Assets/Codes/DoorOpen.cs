@@ -2,33 +2,31 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-	public class DoorOpen : MonoBehaviour
+public class DoorOpen : MonoBehaviour
+{
+	public string NextScene = "FearRoom";
+	public GameObject DialogueBox;
+	public TextMeshProUGUI DialogueText;
+	private bool inReach = false;
+
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		public string NextScene = "FearRoom";
-		public GameObject DialogueBox;
-		public TextMeshProUGUI DialogueText;
+		inReach = true;
+	}
 
-		private bool inReach = false;
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		inReach = false;
+	}
 
-		private void OnTriggerEnter2D(Collider2D other)
+	void Update()
+	{
+		if (!inReach) return;
+
+		if (Input.GetKeyDown(KeyCode.F))
 		{
-			inReach = true;
-		}
-
-		private void OnTriggerExit2D(Collider2D other)
-		{
-			inReach = false;
-		}
-
-		void Update()
-		{
-			if (!inReach) return;
-
-
-			if (Input.GetKeyDown(KeyCode.F))
-			{
-				var mainGame = FindObjectOfType<MainGame>();
-			if(mainGame == null)
+			var mainGame = FindObjectOfType<MainGame>();
+			if (mainGame == null)
 			{
 				SceneManager.LoadScene(NextScene);
 			}
@@ -38,7 +36,7 @@ using UnityEngine.SceneManagement;
 				DialogueBox.SetActive(true);
 				DialogueText.text = "The door won't open yet.";
 			}
-			else 
+			else
 			{
 				DialogueBox.SetActive(true);
 				DialogueText.text = "I'm escaping this room.";
@@ -51,9 +49,8 @@ using UnityEngine.SceneManagement;
 			}
 		}
 	}
+}
 
-
-	}
 
 
 

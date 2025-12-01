@@ -2137,8 +2137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: -0.0658, y: -0.0971}
+  m_SizeDelta: {x: 1998.9526, y: 1200.4165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &833496188
 GameObject:
@@ -2525,9 +2525,9 @@ MonoBehaviour:
   speed: 5
   Forward: {fileID: 21300000, guid: 06db5098f36a89e40bb10f6d2a6c146e, type: 3}
   Back: {fileID: 21300000, guid: aac3c5b89d1311e45a85e891a7d6db3f, type: 3}
-  left: {fileID: 21300000, guid: db4c7ff8c4b85c641bd61cf08ea6c4ff, type: 3}
+  Left: {fileID: 21300000, guid: db4c7ff8c4b85c641bd61cf08ea6c4ff, type: 3}
   Right: {fileID: 21300000, guid: abc9bddd0805e9e4d951e6e4462f781e, type: 3}
-  rb: {fileID: 0}
+  rigidBody: {fileID: 0}
   spriteRenderer: {fileID: 0}
   move: {x: 0, y: 0}
 --- !u!50 &932649456
